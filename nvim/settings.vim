@@ -3,10 +3,10 @@
 "
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost ~/.dotfiles/vim/vimrc.symlink source ~/.vimrc
-autocmd! bufwritepost ~/.dotfiles/vim/settings.vim source ~/.vimrc
-autocmd! bufwritepost ~/.dotfiles/vim/maps.vim source ~/.vimrc
-autocmd! bufwritepost ~/.dotfiles/vim/plugins.vim source ~/.vimrc
+" autocmd! bufwritepost ~/.dotfiles/vim/vimrc.symlink source ~/.vimrc
+" autocmd! bufwritepost ~/.dotfiles/vim/settings.vim source ~/.vimrc
+" autocmd! bufwritepost ~/.dotfiles/vim/maps.vim source ~/.vimrc
+" autocmd! bufwritepost ~/.dotfiles/vim/plugins.vim source ~/.vimrc
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -63,6 +63,7 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 set smarttab
+
 " set relativenumber
 set scrolloff=5
 set hlsearch

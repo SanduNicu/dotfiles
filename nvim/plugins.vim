@@ -1,5 +1,5 @@
 " Plugins 
-call plug#begin('~/.dotfiles/vim/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'pangloss/vim-javascript' 
 Plug 'mattn/emmet-vim' 
