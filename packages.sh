@@ -7,10 +7,12 @@ export PKG=(
   pulseaudio-bluetooth
   ranger
   redshift
-  rofi
   unzip
   wget
   xclip
+  scrot
+  pcmanfm
+  qbittorrent
 )
 
 export AUR=(

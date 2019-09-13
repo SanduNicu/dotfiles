@@ -55,9 +55,9 @@ function _symlink() {
   for dir in $dirs; do
     echo "Installing ${dir}..."
     cd "$dir" || exit
-    chmod a+x install
     make install
     ./install
+    rm install
     cd ..
   done
 }
