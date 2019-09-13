@@ -29,6 +29,9 @@ call plug#end()
 
 colorscheme gruvbox
 
+" make it transparent
+hi Normal guibg=NONE ctermbg=NONE
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

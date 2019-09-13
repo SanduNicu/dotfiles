@@ -37,13 +37,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Ctrl+t   exec compton -b
-
 # kill focused window
 bindsym $mod+q kill
 
 # Run at startup
 exec --no-startup-id nm-applet
+exec --no-startup-id compton
 exec --no-startup-id pa-applet
 exec --no-startup-id redshift -l 44.4:-26.1 -t 5700:3600
 
