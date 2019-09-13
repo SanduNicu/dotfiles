@@ -17,6 +17,7 @@ export PKG=(
 export AUR=(
   google-chrome
   neovim
+  mpv
   # polybar
   rainbow
   spotify
