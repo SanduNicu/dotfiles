@@ -9,6 +9,8 @@ font pango:monospace 11
 new_window pixel 1
 new_float normal
 hide_edge_borders none
+new_window none
+
 
 # Applications
 bindsym $mod+c exec google-chrome-stable
@@ -35,6 +37,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+bindsym $mod+Ctrl+t   exec compton -b
+
 # kill focused window
 bindsym $mod+q kill
 
@@ -42,6 +46,9 @@ bindsym $mod+q kill
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec --no-startup-id redshift -l 44.4:-26.1 -t 5700:3600
+
+# Background
+exec --no-startup-id feh --bg-scale ~/Pictures/Backgrounds/field-tree.jpg 
 
 ##################################################
 # NAVIGATION

@@ -5,7 +5,6 @@ export PKG=(
   neofetch
   pulseaudio
   pulseaudio-bluetooth
-  ranger
   redshift
   unzip
   wget
