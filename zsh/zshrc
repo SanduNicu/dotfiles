@@ -1,0 +1,23 @@
+export DOTFILES="$HOME/.dotfiles"
+export ZSH=$HOME/.oh-my-zsh
+export EDITOR="vim"
+export TERMINAL="termite"
+export BROWSER="google-chrome-stable"
+
+source $DOTFILES/zsh/aliases.zsh
+source $DOTFILES/zsh/functions.zsh
+
+#Plugins - must be above oh-my-zsh sourcing
+plugins=(git node)
+
+# THEME
+ZSH_THEME="robbyrussell"
+source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Run startx at startup
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	pgrep i3 || startx
+fi
+
