@@ -14,13 +14,13 @@ export PKG=(
   qbittorrent
   playerctl
   otf-font-awesome
+  vlc
 )
 
 export AUR=(
   google-chrome
   neovim
-  mpv
-  # polybar
+  polybar
   rainbow
   spotify
   chruby
