@@ -21,4 +21,5 @@ export AUR=(
   # polybar
   rainbow
   spotify
+  chruby
 )
