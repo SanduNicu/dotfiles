@@ -12,6 +12,8 @@ export PKG=(
   scrot
   pcmanfm
   qbittorrent
+  playerctl
+  otf-font-awesome
 )
 
 export AUR=(
