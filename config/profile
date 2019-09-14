@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export EDITOR="vim"
+export TERMINAL="termite"
+export BROWSER="google-chrome-stable"
+
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	pgrep i3 || startx
+fi
+
+xrandr --output eDP1 --primary --mode 1600x900
