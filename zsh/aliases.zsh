@@ -10,6 +10,7 @@ alias y="yay"
 alias ka="killall"
 alias :q="exit"
 alias mk=make
+alias pro= sudo pacman -Rs $(pacman -Qqtd)
 
 alias reload!='. ~/.zshrc'
 alias cls='clear' # Good 'ol Clear Screen command
