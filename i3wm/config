@@ -19,9 +19,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec rofi -show combi
 
 # Printscreen
-bindsym Print                      exec --no-startup-id i3-scrot
-bindsym $mod+Print       --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym Print exec escrotum -s -C
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

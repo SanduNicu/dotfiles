@@ -24,4 +24,5 @@ export AUR=(
   rainbow
   spotify
   chruby
+  escrotum
 )
