@@ -40,6 +40,7 @@ bindsym $mod+q kill
 # Run at startup
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
+exec --no-startup-id dunst
 exec --no-startup-id redshift -l 44.4:-26.1 -t 5700:3600
 exec_always --no-startup-id ~/.dotfiles/spells/launch-polybar.sh
 exec_always --no-startup-id conky -c .dotfiles/conky/conky-solarized
