@@ -1,0 +1,145 @@
+# ==========================================
+# React Snippets
+#
+
+snippet rcc "react class component" b
+import React from 'react';
+
+class `!v expand('%:t:r')` extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {};
+	}
+
+	render() {
+		return (
+			<div>
+				Placeholder$1
+			</div>
+		);
+	}
+}
+
+export default `!v expand('%:t:r')`;
+endsnippet
+
+snippet rfc "react function component" b
+import React from 'react';
+
+const ${1:`!v expand('%:t:r')`} = props => {
+	return ${2:null};$0
+};
+
+export default $1;
+endsnippet
+
+
+snippet rrc "react redux container" b
+import { connect } from 'react-redux';
+import $1 from '$2';
+
+const mapStateToProps = (state) => {
+	return {
+		app: state.app,
+	};
+};
+
+const mapDispatchToProps = (dispatch) => { // eslint-disable-line
+	return {
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)($1);
+endsnippet
+
+
+
+# ==========================================
+# Component Specs and Lifecycle Section
+#
+
+snippet gds "get derived state from props" b
+static getDerivedStateFromProps(nextProps, prevState) {
+	return ${1:null};$0
+}
+endsnippet
+
+snippet gde "get derived state from error" b
+static getDerivedStateFromError(error) {
+	return ${1:null};$0
+}
+endsnippet
+
+snippet cdm "component did mount" b
+componentDidMount() {
+	$1
+}
+endsnippet
+
+snippet scu "should component update" b
+shouldComponentUpdate(nextProps, nextState) {
+	return ${1:true};$0
+}
+endsnippet
+
+snippet gsbu "get snapshot before update" b
+getSnapshotBeforeUpdate(prevProps, prevState) {
+	return ${1:null};$0
+}
+endsnippet
+
+snippet cdu "component did update" b
+componentDidUpdate(prevProps, prevState, ${1:snapshot}) {
+	$0
+}
+endsnippet
+
+snippet cdc "component did catch" b
+componentDidCatch(error, info) {
+	$0
+}
+endsnippet
+
+snippet cwum "component will unmount" b
+componentWillUnmount() {
+	$1
+}
+endsnippet
+
+
+# ==========================================
+# React stuff
+#
+
+snippet imp "import from" b
+import $1 from '$2';
+endsnippet
+
+snippet impn "import { nested } from" b
+import { $1 } from '$2';
+endsnippet
+
+snippet impr "Ramda Import" b
+import { $1 } from 'ramda';
+
+endsnippet
+snippet rc "require" b
+const $1 = require('$2');
+endsnippet
+
+snippet cl "console.log"
+console.log($1);
+endsnippet
+
+snippet clv "console.log variable"
+console.log('$1:', $1);
+endsnippet
+
+snippet dp "Destructure props"
+const { $1 } = this.props;
+endsnippet
+
+snippet ds "Destructure state"
+const { $1 } = this.state;
+endsnippet
