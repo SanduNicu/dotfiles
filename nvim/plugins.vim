@@ -60,7 +60,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/UltiSnips']
 let g:NERDTreeQuitOnOpen=1
 
 " Emmet
-let g:user_emmet_leader_key=','
+let g:user_emmet_leader_key='<c-e>'
 let g:user_emmet_install_global = 0 " don't enable for all file types
 
 " make emmet behave well with JSX in JS and TS files
@@ -87,16 +87,10 @@ let g:fzf_action = {
       \ }
 nnoremap <c-p> :FZF<cr>
 nnoremap <C-g> :Rg<Cr>
-" augroup fzf
-"   autocmd!
-"   autocmd! FileType fzf
-"   autocmd  FileType fzf set laststatus=0 noshowmode noruler
-"     \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-" augroup END
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --no-ignore --glob="!.git/*" --glob="!client/yarn.lock" --glob="!log/" --glob="!frontend/node_modules/*" --glob="!node_modules/*" --glob="!client/node_modules/*" --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   'rg --glob="!.git/*" --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
