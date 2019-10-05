@@ -38,6 +38,7 @@ floating_modifier $mod
 bindsym $mod+q kill
 
 # Run at startup
+exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
 exec --no-startup-id dunst

@@ -22,8 +22,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'
-Plug 'ap/vim-css-color'
 
 call plug#end()
 
@@ -37,14 +37,50 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Airline <3
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = '✗\ '
+let g:ale_sign_warning = '⚠\ '
+
+" Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 let g:airline#extensions#ale#enabled = 1
 set laststatus=2
 
+" ultisnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/UltiSnips']
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=1
+
+" Emmet
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0 " don't enable for all file types
+
+" make emmet behave well with JSX in JS and TS files
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\  'typescript' : {
+\      'extends' : 'tsx',
+\  },
+\}
+
+autocmd FileType html,css,javascript.jsx,typescript.tsx,scss EmmetInstall " specifies file types
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+"
 " Fuzzy file finder
+" 
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vsplit'
@@ -65,15 +101,4 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
 
-" ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/nvim/UltiSnips']
-
-" Emmet
-let g:user_emmet_leader_key='<c-e>'
-let g:user_emmet_install_global = 0 " don't enable for all file types
-let g:user_emmet_settings = {'javascript': {'extends': 'jsx'}}
-autocmd FileType html,css,javascript.jsx,scss EmmetInstall " specifies file typeslet g:user_emmet_leader_key='<space>'
 

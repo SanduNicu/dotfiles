@@ -16,3 +16,4 @@ alias reload!='. ~/.zshrc'
 alias cls='clear' # Good 'ol Clear Screen command
 alias tn='tmux new -s'
 alias ta='tmux a -t'
+alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
