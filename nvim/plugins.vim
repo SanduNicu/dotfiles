@@ -37,11 +37,15 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Enable completion where available.
+" Gundo
+if has('python3')
+    let g:gundo_prefer_python3 = 1
+endif
+ 
 " This setting must be set before ALE is loaded.
-let g:ale_completion_enabled = 1
-let g:ale_sign_error = '✗\ '
-let g:ale_sign_warning = '⚠\ '
+" let g:ale_completion_enabled = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
