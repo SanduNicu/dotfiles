@@ -11,6 +11,7 @@ alias ka='killall'
 alias :q='exit'
 alias mk='make'
 alias pclean='sudo pacman -Rs $(pacman -Qqtd)'
+alias sdn='shutdown now'
 
 alias reload!='. ~/.zshrc'
 alias cls='clear' # Good 'ol Clear Screen command
