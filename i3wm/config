@@ -40,9 +40,10 @@ bindsym $mod+q kill
 # Run at startup
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
-exec --no-startup-id compton
+# exec --no-startup-id compton
+exec --no-startup-id picom -b
 exec --no-startup-id dunst
-exec --no-startup-id redshift -l 44.4:-26.1 -t 5700:3600
+exec --no-startup-id redshift-gtk
 exec_always --no-startup-id ~/.dotfiles/spells/launch-polybar.sh
 exec_always --no-startup-id conky -c .dotfiles/conky/conky-solarized
 
@@ -138,10 +139,12 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 #lock i3
 bindsym $mod+Shift+q exec i3lock -c 000000 
