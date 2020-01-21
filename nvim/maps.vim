@@ -6,7 +6,7 @@ let g:mapleader = ","
 map <leader>r :e! ~/.vimrc<cr>
 
 
-imap jj <Esc>
+imap jk <Esc>
 
 map <C-z> ;
 
