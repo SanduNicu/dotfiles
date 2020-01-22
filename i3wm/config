@@ -28,8 +28,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -48,7 +48,7 @@ exec_always --no-startup-id ~/.dotfiles/spells/launch-polybar.sh
 exec_always --no-startup-id conky -c .dotfiles/conky/conky-solarized
 
 # Background
-exec --no-startup-id feh --bg-scale ~/Pictures/Backgrounds/arch-bg.png 
+exec --no-startup-id feh --bg-scale ~/Pictures/Backgrounds/arch-bg.jpg
 
 ##################################################
 # NAVIGATION

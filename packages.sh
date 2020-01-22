@@ -15,6 +15,7 @@ export PKG=(
   playerctl
   otf-font-awesome
   vlc
+  ripgrep
 )
 
 export AUR=(
