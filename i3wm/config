@@ -20,7 +20,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+d exec rofi -show combi
 
 # Printscreen
-bindsym Print exec escrotum -s -C
+bindsym Print exec "maim -s | xclip -selection clipboard -t image/png"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
