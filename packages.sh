@@ -16,6 +16,8 @@ export PKG=(
   otf-font-awesome
   vlc
   ripgrep
+  zathura
+  zathura-pdf-poppler
 )
 
 export AUR=(
