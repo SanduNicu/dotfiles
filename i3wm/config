@@ -49,7 +49,7 @@ exec_always --no-startup-id ~/.dotfiles/spells/launch-polybar.sh
 exec_always --no-startup-id conky -c .dotfiles/conky/conky-solarized
 
 # Background
-exec --no-startup-id feh --bg-scale ~/Pictures/Backgrounds/arch-bg.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Backgrounds/arch-bg.png
 
 ##################################################
 # NAVIGATION
