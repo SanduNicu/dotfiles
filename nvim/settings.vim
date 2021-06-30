@@ -2,21 +2,16 @@
 " General settings
 "
 
-" When vimrc is edited, reload it
-" autocmd! bufwritepost ~/.dotfiles/vim/vimrc.symlink source ~/.vimrc
-" autocmd! bufwritepost ~/.dotfiles/vim/settings.vim source ~/.vimrc
-" autocmd! bufwritepost ~/.dotfiles/vim/maps.vim source ~/.vimrc
-" autocmd! bufwritepost ~/.dotfiles/vim/plugins.vim source ~/.vimrc
-
 " Set to auto read when a file is changed from the outside
 set autoread
-"
-" Fast saving
-nmap <C-s> :w!<CR>
+
 
 " Set backspace config
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+set encoding=UTF-8
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 set showmatch "Show matching bracets when text indicator is over them
 
@@ -34,7 +29,7 @@ set showcmd
 set wildmenu
 
 " turn on line numbering
-set number
+set number relativenumber
 
 " auto indent the next line
 set ai

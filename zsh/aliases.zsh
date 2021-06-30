@@ -1,9 +1,10 @@
 # ALIASES
 
-alias dot="cd $HOME/.dotfiles && nvim ."
+alias dot="cd $HOME/.dotfiles"
+alias dotv="cd $HOME/.dotfiles && nvim ."
 
+alias rld='. ~/.zshrc'
 alias v='nvim'
-alias vim='nvim'
 alias r='ranger'
 alias p='sudo pacman'
 alias y='yay'

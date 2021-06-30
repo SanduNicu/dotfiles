@@ -5,6 +5,8 @@ let g:mapleader = ","
 " Fast editing of the .vimrc
 map <leader>r :e! ~/.vimrc<cr>
 
+" Reload vimrc
+nnoremap <Leader>rf :source $DOTFILES/nvim/init.vim<CR>
 
 imap jk <Esc>
 

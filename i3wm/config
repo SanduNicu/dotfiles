@@ -16,7 +16,7 @@ new_window none
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+e exec termite -e 'ranger'
 bindsym $mod+Shift+e exec pcmanfm
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 bindsym $mod+d exec rofi -show combi
 
 # Printscreen
@@ -106,10 +106,10 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 
-exec --no-startup-id xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP1 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+# exec --no-startup-id xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP1 --mode 1920x1080 --pos 3840x0 --rotate normal --output DP2 --off --output HDMI1 --off --output HDMI2 --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 set $monitor1 eDP1
-set $monitor2 HDMI2
+set $monitor2 HDMI1
 set $monitor3 DP1
 
 set $ws1 "1"
