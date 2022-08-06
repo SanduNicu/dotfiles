@@ -12,7 +12,7 @@ export LANG=en_US.UTF-8
 . $HOME/.keys
 
 # Plugins - must be above oh-my-zsh sourcing
-plugins=(git node zsh-completions)
+plugins=(git node zsh-completions zsh-autosuggestions)
 
 
 # Enable zsh-completion
