@@ -9,10 +9,9 @@ alias :q='exit'
 alias mk='make'
 alias sdn='shutdown now'
 alias rld='. ~/.zshrc'
-alias cls='clear' # Good 'ol Clear Screen command
+alias cls='clear'
 alias tn='tmux new -s'
 alias ta='tmux a -t'
-
 
 alias gpushf='git push --force'
 alias gcw='git commit -m wip'
@@ -21,7 +20,7 @@ alias gfa='git fetch --all'
 alias nrw='npm run watch'
 
 # hacks
-alias gitk="sed -i .bak 's/zoomed/normal/g' ~/.config/git/gitk && /usr/local/bin/gitk"
+# alias gitk="sed -i .bak 's/zoomed/normal/g' ~/.config/git/gitk && /usr/local/bin/gitk"
 
 
 gpullf() {
