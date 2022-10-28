@@ -1,59 +1,24 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
-
-
-# Setup term for programs to be able to use it
 env:
   TERM: xterm-256color
 
-shell:
-  # program: /usr/local/bin/zsh
-  # args:
-  #   - --login
-
 window:
   opacity: 0.85
-  # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
-
-  # Hide bar
   # decorations: "none"
-
-  # Startup Mode (changes require restart)
   startup_mode: maximized
 
-# Sample Font configuration for font: Monoid.
-# Feel free to use different font configuration family & face for each sections
 font:
-  # Normal font face - Also used to draw glyphs on tmux & VIM
-  # NOTE: You may use any font you'd like but make sure the normal fonts
-  # support ligatures/glyphs. That's used by tmux & VIM to provide a better
-  # UI for powerline & tmux bottom bar.
   normal:
-    # Font name
     family: FiraCode Nerd Font Mono
-  # Font size
-  size: 8.0
-
+  size: 14
   offset:
    x: 0
    y: 1
-
-
-  # Better font rendering for mac
-  use_thin_strokes: true
-
 selection:
   semantic_escape_chars: ",?`|:\"' ()[]{}<>\t"
-
-  # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-
-# Live config reload (changes require restart)
 live_config_reload: true
 
-# Setup some amazing custom key bindings here - Best thing is you can setup key bindings
-# using Mac's 'command' to control your tmux.
-# A great reference: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/#make-alacritty-feel-like-iterm2
 key_bindings:
   - { key: K, mods: Control|Shift, chars: "\x00n"                 }  # select next tab
   - { key: J, mods: Control|Shift, chars: "\x00p"                 }  # select previous tab
@@ -64,29 +29,10 @@ key_bindings:
   - { key: T,        mods: Alt,    chars: "\x00c"                 }  # new tab
 
 scrolling:
-  # How many lines of scrollback to keep,
-  # '0' will disable scrolling.
   history: 10000
-
-  # Number of lines the viewport will move for every line
-  # scrolled when scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number
-  # of lines the terminal should scroll when the alternate
-  # screen buffer is active. This is used to allow mouse
-  # scrolling for applications like `man`.
-  #
-  # To disable this completely, set `faux_multiplier` to 0.
-  multiplier: 3
-
-# Colors (Gruvbox dark)
 colors:
-  # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
     background: '#282828'
-    # soft contrast: background = '#32302f'
     foreground: '#ebdbb2'

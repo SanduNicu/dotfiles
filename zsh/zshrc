@@ -11,15 +11,13 @@ export LANG=en_US.UTF-8
 . $HOME/scripts/*.sh
 . $HOME/.keys
 
-# Plugins - must be above oh-my-zsh sourcing
 plugins=(git node zsh-completions zsh-autosuggestions)
 
-
-# Enable zsh-completion
+# Enable zsh-completio
 autoload -Uz compinit && compinit -I
 
 # Fix oh-my-zsh error
-ZSH_DISABLE_COMPFIX=true
+# ZSH_DISABLE_COMPFIX=true
 
 # Disable autocd
 unsetopt autocd
@@ -46,14 +44,6 @@ bindkey '^[[Z' reverse-menu-complete
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs -g "!{node_modules,.git}"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height 75% --reverse'
-
-# Python3 non-sense
-#
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 pasteinit() {
