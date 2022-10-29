@@ -4,13 +4,13 @@ env:
 window:
   opacity: 0.85
   dynamic_padding: true
-  # decorations: "none"
+  decorations: "none"
   startup_mode: maximized
 
 font:
   normal:
     family: FiraCode Nerd Font Mono
-  size: 14
+  size: 8
   offset:
    x: 0
    y: 1
