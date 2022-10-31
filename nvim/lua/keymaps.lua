@@ -7,7 +7,6 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -72,7 +71,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {})
 keymap("n", "<leader><S-e>", ":NvimTreeFindFile<CR>", {})
 
 keymap("n", "<leader>fo", ":Format<CR>", {})
-vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 
 -- Troble
 keymap("n", "<leader>xx", "<cmd>Trouble<cr>", opts)
